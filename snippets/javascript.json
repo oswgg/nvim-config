@@ -1,0 +1,96 @@
+{
+  "Belongs to Rel": {
+    "prefix": ".belongsTo",
+    "body": [
+      "$1.belongsTo(models.$2, {",
+      "    foreignKey: '$3',",
+      "    targetKey: '$4'",
+      "})"
+    ],
+    "description": "Relacion belongs to Sequelize"
+  },
+  "Has Many Rel": {
+    "prefix": ".hasMany",
+    "body": [
+      "$1.hasMany(models.$2, {",
+      "    foreignKey: '$3',",
+      "    sourceKey: '$4'",
+      "})"
+    ]
+  },
+  "FK Constraint Sequelize": {
+    "prefix": ".fkc",
+    "body": [
+      "await queryInterface.addConstraint($1.tableName, {",
+      "    type: 'foreign key',",
+      "    fields: ['$2'],",
+      "    references: {",
+      "        table: '$3',",
+      "        field: '$4'",
+      "    },",
+      "    name: `fk_${$1.tableName}_$3_$4`",
+      "})"
+    ]
+  },
+  "Promise structure for response": {
+    "prefix": ".res",
+    "body": [
+      "$1.$2($3).then(dataReg => { ",
+      "    return res.status(200).json({",
+      "        status: true,",
+      "        data: dataReg",
+      "    })",
+      "}).catch(err => {",
+      "    return res.status(500).json({",
+      "        status: false,",
+      "        err",
+      "    })",
+      "})"
+    ]
+  },
+  "Console log": {
+    "prefix": "lg",
+    "body": ["console.log($1)"]
+  },
+  "Try Catch Statement": {
+    "prefix": "traca",
+    "body": [
+      "try {",
+      "   $1",
+      "} catch (err) {",
+      "    console.log(err)",
+      "    throw err",
+      "}"
+    ]
+  },
+  "Controller Method": {
+    "prefix": ".()",
+    "body": [
+      "$1: async (req, res) => {",
+      "    try {",
+      "        $2",
+      "        return res.status(200).json({",
+      "            status: true,",
+      "            data",
+      "        })",
+      "    } catch (err) {",
+      "        console.log(err)",
+      "        return res.status(500).json({",
+      "            status: false,",
+      "            error: err",
+      "        })",
+      "    }",
+      "},"
+    ]
+  },
+  "Unique Key Constraint": {
+    "prefix": ".unq",
+    "body": [
+      "await queryInterface.addConstraint($1.tableName, {",
+      "    type: 'unique',",
+      "    fields: ['$2'],",
+      "    name: 'unq_$3'",
+      "})"
+    ]
+  }
+}
