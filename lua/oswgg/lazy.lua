@@ -11,19 +11,16 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup(
-	{
-		{ import = "oswgg.plugins" },
-		{ import = "oswgg.plugins.lsp" },
-		{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+require("lazy").setup({
+	{ import = "oswgg.plugins" },
+	{ import = "oswgg.plugins.lsp" },
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+}, {
+	checker = {
+		enabled = true,
+		notify = false,
 	},
-	{
-		checker = {
-			enabled = true,
-			notify = false,
-		},
-		change_detection = {
-			notify = false,
-		},
-	}
-)
+	change_detection = {
+		notify = false,
+	},
+})

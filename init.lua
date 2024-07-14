@@ -41,4 +41,7 @@ vim.api.nvim_set_keymap(
 	":lua CopyFileName()<CR>",
 	{ noremap = true, silent = true, desc = "Copy file name" }
 )
+
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+
 vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])

@@ -36,3 +36,7 @@ keymap.set("n", "<S-Tab>", "<<", { noremap = true, silent = true })
 keymap.set("n", "<leader>gtc", function()
 	require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = true, desc = "Go to context" })
+
+keymap.set("n", "<leader>rn", function()
+	return ":IncRename " .. vim.fn.expand("<cword>")
+end, { expr = true, desc = "Rename" })

@@ -12,12 +12,12 @@ return {
 
 		keymap.set("n", "<leader>se", function()
 			require("scissors").editSnippet()
-		end)
+		end, { desc = "Edit snippet" })
 
 		-- when used in visual mode, prefills the selection as snippet body
 		keymap.set({ "n", "x" }, "<leader>sa", function()
 			require("scissors").addNewSnippet()
-		end)
+		end, { desc = "Add new snippet" })
 
 		require("scissors").setup({
 			snippetDir = vim.fn.stdpath("config") .. "/snippets",
