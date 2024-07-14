@@ -24,7 +24,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
 	"n",
 	"<leader>yy",
-	":lua CopyRelativeFilePath()<CR>",
+	":lua CopyFilePath()<CR>",
 	{ noremap = true, silent = true, desc = "Copy full file path" }
 )
 
@@ -35,4 +35,10 @@ function CopyFileName()
 end
 
 -- Asigna la función a una combinación de teclas, por ejemplo, <leader>n
-vim.api.nvim_set_keymap("n", "<leader>yu", ":lua CopyFileName()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>yu",
+	":lua CopyFileName()<CR>",
+	{ noremap = true, silent = true, desc = "Copy file name" }
+)
+vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
