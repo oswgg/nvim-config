@@ -9,7 +9,7 @@ return {
 			sync_install = false,
 			highlight = { enable = true },
 			indent = { enable = true },
-			max_lines = 1,
+			max_lines = 2,
 		})
 	end,
 }

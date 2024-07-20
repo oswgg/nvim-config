@@ -18,6 +18,9 @@ return {
 			autotag = { enable = true },
 
 			ensure_installed = {
+				"lua",
+				"http",
+				"graphql",
 				"json",
 				"javascript",
 				"typescript",

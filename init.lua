@@ -45,3 +45,9 @@ vim.api.nvim_set_keymap(
 vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 
 vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
+
+vim.filetype.add({
+	extension = {
+		["http"] = "http",
+	},
+})

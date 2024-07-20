@@ -52,7 +52,7 @@ return {
 		-- configure lualine with modified theme
 		lualine.setup({
 			options = {
-				theme = "catppuccin",
+				theme = "tokyonight",
 			},
 			sections = {
 				lualine_x = {
@@ -64,6 +64,11 @@ return {
 					{ "encoding" },
 					{ "fileformat" },
 					{ "filetype" },
+					{
+						"rest",
+						icon = "",
+						fg = "#428890",
+					},
 				},
 			},
 		})
