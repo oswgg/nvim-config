@@ -18,6 +18,7 @@ return {
 				indent_markers = {
 					enable = true,
 				},
+				highlight_git = true,
 				icons = {
 					glyphs = {
 						folder = {
@@ -25,7 +26,13 @@ return {
 							arrow_open = "↡", -- arrow when folder is open
 						},
 					},
+					show = {
+						git = true,
+					},
 				},
+			},
+			live_filter = {
+				always_show_folders = false,
 			},
 			-- disable window_picker for
 			-- explorer to work well with
@@ -41,6 +48,7 @@ return {
 				custom = { ".DS_Store" },
 			},
 			git = {
+				enable = true,
 				ignore = false,
 			},
 		})
