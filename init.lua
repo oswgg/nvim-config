@@ -51,3 +51,5 @@ vim.filetype.add({
 		["http"] = "http",
 	},
 })
+
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#FF9D65", bold = true })
