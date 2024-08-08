@@ -46,6 +46,7 @@ return {
 			},
 			filters = {
 				custom = { ".DS_Store" },
+				dotfiles = true,
 			},
 			git = {
 				enable = true,

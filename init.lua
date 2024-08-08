@@ -53,3 +53,6 @@ vim.filetype.add({
 })
 
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#FF9D65", bold = true })
+vim.o.termguicolors = true
+vim.o.cursorline = true
+vim.o.wrap = false

@@ -49,5 +49,7 @@ return {
 		require("lspconfig").clangd.setup({
 			on_attach = on_attach,
 		})
+
+		vim.api.nvim_set_hl(0, "NavicSeparator", { bg = "#AAA1E1" })
 	end,
 }

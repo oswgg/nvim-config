@@ -1,5 +1,5 @@
 return {
-	"DaikyXendo/nvim-material-icon",
+	"nvim-tree/nvim-web-devicons",
 	config = function()
 		require("nvim-web-devicons").setup({
 			override = {
@@ -8,6 +8,11 @@ return {
 					color = "#428850",
 					cterm_color = "65",
 					name = "Zsh",
+				},
+				folder = {
+					icons = "󰉖",
+					color = "#376C7D",
+					name = "Folder",
 				},
 			},
 			-- globally enable different highlight colors per icon (default to true)
